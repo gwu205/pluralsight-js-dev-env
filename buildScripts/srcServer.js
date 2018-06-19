@@ -1,9 +1,9 @@
-var express = require('express');
-var path = require('path');
-var open = require('open');
+import express from 'express';
+import path from 'path';
+import open from 'open';
 
-var port = 1337;
-var app = express();
+const port = 1337;
+const app = express();
 
 app.get('/', function(req, res) { // any references to the root should be handled by this function, which takes a request and a response
   res.sendFile(path.join(__dirname, '../src/index.html')); // get response and join specified file to the directory name that function is currently running
